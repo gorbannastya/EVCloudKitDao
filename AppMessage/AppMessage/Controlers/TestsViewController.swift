@@ -50,11 +50,11 @@ class TestsViewController: UIViewController {
     
     func conflictTest() {
         let message = Message()
-        message.recordID = CKRecordID(recordName: "We use this twice")
+        message.recordID = CKRecord.ID(recordName: "We use this twice")
         message.Text = "This is the message text"
 
         let message2 = Message()
-        message2.recordID = CKRecordID(recordName: "We use this twice")
+        message2.recordID = CKRecord.ID(recordName: "We use this twice")
         message2.Text = "This is an other message text"
 
         self.dao.saveItem(message, completionHandler: {record in
@@ -74,11 +74,7 @@ class TestsViewController: UIViewController {
         // retrieve our CloudKit user id. (made syncronous for this demo)
         let sema = DispatchSemaphore(value: 0)
         dao.discoverUserInfo({ (user) -> Void in
-            if #available(iOS 10.0, *) {
                 self.userId = (user as! CKUserIdentity).userRecordID?.recordName ?? ""
-            } else {
-                self.userId = (user as! CKDiscoveredUserInfo).userRecordID?.recordName ?? ""
-            }
             EVLog("discoverUserInfo : \(showNameFor(user))");
             sema.signal();
         }) { (error) -> Void in
@@ -199,7 +195,7 @@ class TestsViewController: UIViewController {
         })
 
         // Get all records of a recordType that are created by me using a predicate
-        let predicate = NSPredicate(format: "creatorUserRecordID == %@", CKRecordID(recordName: userId))
+        let predicate = NSPredicate(format: "creatorUserRecordID == %@", CKRecord.ID(recordName: userId))
         dao.query(Message(), predicate:predicate, completionHandler: { results, isFinished in
             EVLog("query recordType created by: result count = \(results.count)")
             return false

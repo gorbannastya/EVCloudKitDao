@@ -81,13 +81,14 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //This line all you need to get the correct data for cell that is selected
         if let news: News = EVCloudData.publicDB.data["News_All"]![(indexPath as NSIndexPath).row] as? News {
             if let url: URL = URL(string: news.ActionUrl) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+                    UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
 
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

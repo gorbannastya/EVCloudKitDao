@@ -16,7 +16,7 @@ end
 
 target 'AppMessage' do
     project 'AppMessage/AppMessage'
-    platform :ios, '9.0'
+    platform :ios, '10.0'
     pod 'EVCloudKitDao', :path => "./"
     libraries
 end
