@@ -10,7 +10,7 @@ import CloudKit
 import EVCloudKitDao
 
 class RightMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    //CKUserIdentity or CKDiscoveredUserInfo
+    //CKUserIdentity
     var contacts: [AnyObject] = []
     
     var tableView: UITableView!
