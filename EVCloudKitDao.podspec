@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
     s.osx.frameworks = "Foundation", "CloudKit"
     s.tvos.frameworks = "Foundation", "CloudKit"
 
-    s.dependency "EVReflection/CloudKit", '~> 5.9.0'
+    s.dependency "EVReflection/CloudKit", '~> 5.10.1'
 end
