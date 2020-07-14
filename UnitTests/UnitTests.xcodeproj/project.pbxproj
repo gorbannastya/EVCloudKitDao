@@ -202,7 +202,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-OSXTest/Pods-OSXTest-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OSXTest/Pods-OSXTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EVCloudKitDao-macOS/EVCloudKitDao.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection-macOS/EVReflection.framework",
 			);
@@ -213,7 +213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-OSXTest/Pods-OSXTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OSXTest/Pods-OSXTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB4631C0687F8C2AA28625F6 /* [CP] Check Pods Manifest.lock */ = {
@@ -240,7 +240,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-tvOSTest/Pods-tvOSTest-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-tvOSTest/Pods-tvOSTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EVCloudKitDao-tvOS/EVCloudKitDao.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection-tvOS/EVReflection.framework",
 			);
@@ -251,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-tvOSTest/Pods-tvOSTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tvOSTest/Pods-tvOSTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4BA76C8A834672D31200EB2 /* [CP] Check Pods Manifest.lock */ = {

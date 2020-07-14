@@ -1,16 +1,14 @@
 PODS:
   - CRToast (0.0.9)
-  - EVCloudKitDao (3.5.1):
-    - EVReflection/CloudKit (~> 5.9.0)
-  - EVReflection/CloudKit (5.9.0):
+  - EVCloudKitDao (3.6.1):
+    - EVReflection/CloudKit (~> 5.10.1)
+  - EVReflection/CloudKit (5.10.1):
     - EVReflection/Core
-  - EVReflection/Core (5.9.0)
+  - EVReflection/Core (5.10.1)
   - JSQMessagesViewController (7.3.5):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - SwiftLocation (3.2.3):
-    - SwiftyJSON (~> 4.0.0-alpha.1)
-  - SwiftyJSON (4.0.0)
+  - SwiftLocation (4.2.0)
   - UIImage-Resize (1.0.1)
   - UzysAssetsPickerController (0.9.9)
   - VIPhotoView (0.1)
@@ -26,13 +24,12 @@ DEPENDENCIES:
   - VIPhotoView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CRToast
     - EVReflection
     - JSQMessagesViewController
     - JSQSystemSoundPlayer
     - SwiftLocation
-    - SwiftyJSON
     - UIImage-Resize
     - UzysAssetsPickerController
     - VIPhotoView
@@ -43,16 +40,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
-  EVCloudKitDao: e2fcef8dfc91267c1598ec06d31dc63cd9e5dd9c
-  EVReflection: 52aa00a9035145b1fcf99acae01b782ecc4adad7
+  EVCloudKitDao: 8b88d4c82ca8500b1f4d5d781d777443e875d6cc
+  EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
   JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
-  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwiftLocation: 609ac8859f2c5d48a6cadd2a58c63b1dae02dc25
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
   VIPhotoView: bdc0cf8ddadda754b451869bd3a919e8eb5c11ab
 
 PODFILE CHECKSUM: 6b32b7a4af2173cc5c48a83c214a88449e95346c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

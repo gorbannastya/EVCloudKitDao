@@ -177,7 +177,7 @@ open class EVCloudKitDao {
     open func initializeDatabase(_ containerIdentifier: String? = nil) {
         let pathDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)
         if pathDir.count > 0 {
-            fileDirectory = pathDir[0] as NSString!
+            fileDirectory = pathDir[0] as NSString?
         } else {
             fileDirectory = ""
         }
@@ -253,7 +253,7 @@ open class EVCloudKitDao {
     - parameter error: The CloudKit error for which you want a functional status.
     - parameter retryAttempt: In case we are retrying a function this parameter has to be incremented each time.
     */
-    open static func handleCloudKitErrorAs(_ error: Error?, retryAttempt: Double = 1) -> HandleCloudKitErrorAs {
+    public static func handleCloudKitErrorAs(_ error: Error?, retryAttempt: Double = 1) -> HandleCloudKitErrorAs {
         // There is no error
         if error == nil {
             return .success
@@ -797,7 +797,7 @@ open class EVCloudKitDao {
 
         let createSubscription = { () -> () in
             
-            let subscription = CKQuerySubscription(recordType: recordType, predicate: predicate, subscriptionID:key, options: [.firesOnRecordCreation, .firesOnRecordUpdate, .firesOnRecordDeletion])
+            let subscription = CKQuerySubscription(recordType: recordType, predicate: predicate, subscriptionID:key, options: [CKQuerySubscription.Options.firesOnRecordCreation, .firesOnRecordUpdate, .firesOnRecordDeletion])
             subscription.notificationInfo = CKSubscription.NotificationInfo()
 // tvOS does not have visible remote notifications. This property is not available.
 #if os(tvOS)
@@ -972,7 +972,7 @@ open class EVCloudKitDao {
             }
         }
 
-        let cloudNotification = CKNotification(fromRemoteNotificationDictionary: converedUserInfo)
+        let cloudNotification = CKNotification(fromRemoteNotificationDictionary: converedUserInfo)!
         //EVLog("Notification alert body : \(cloudNotification.alertBody)")
 
         // Handle CloudKit subscription notifications

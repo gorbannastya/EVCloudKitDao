@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     #s.watchos.deployment_target = '3.0'
     s.tvos.deployment_target = '9.0'
 
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5' }
 
     s.source       = { :git => "https://github.com/evermeer/EVCloudKitDao.git", :tag => s.version.to_s }
     s.source_files  = 'Source/*'
